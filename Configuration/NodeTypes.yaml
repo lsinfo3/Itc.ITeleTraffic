@@ -1,0 +1,90 @@
+# If you need more than just the "main" content area you can
+# uncomment the snippet below. It will add a "sidebar" area
+# to your pages. You can add as many areas as you like, still
+# only those that are rendered in your TypoScript and Template
+# are visible on your page.
+---
+'TYPO3.Neos.NodeTypes:Page':
+  ui:
+    inspector:
+      groups:
+        teaser:
+          label: 'Teaser'
+  properties:
+    teaser:
+      type: string
+      ui:
+        label: 'Teaser'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'teaser'
+    teaserReference:
+      type: reference
+      ui:
+        label: 'Link Target'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'teaser'
+  childNodes:
+    main:
+      constraints:
+        nodeTypes:
+          'Itc.ITeleTraffic:Congress': FALSE
+
+    sidebar:
+      type: 'TYPO3.Neos:ContentCollection'
+
+'Itc.ITeleTraffic:Congress':
+  superTypes: ['TYPO3.Neos:Content']
+  ui:
+    group: 'general'
+    label: 'Congress'
+    inspector:
+      groups:
+        congress:
+          label: 'Congress'
+  properties:
+    name:
+      type: string
+      ui:
+        label: 'Name'
+        reloadIfChanged: TRUE
+        inlineEditable: TRUE
+        inspector:
+          group: 'congress'
+    year:
+      type: integer
+      defaultValue: 2015
+      ui:
+        label: 'Year'
+        reloadIfChanged: TRUE
+        inlineEditable: TRUE
+        inspector:
+          group: 'congress'
+    homepageUrl:
+      type: string
+      ui:
+        label: 'Homepage URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'congress'    
+    program:
+      type: reference
+      ui:
+        label: 'Program'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'congress'
+
+
+'Itc.ITeleTraffic:Congresses':
+  superTypes: ['TYPO3.Neos:Content']
+  constraints:
+    nodeTypes:
+      'Itc.ITeleTraffic:Congress': TRUE
+      '*': FALSE
+  ui:
+    group: 'general'
+    label: 'Congresses'
+    inlineEditable: true

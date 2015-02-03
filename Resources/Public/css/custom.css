@@ -1,0 +1,11 @@
+.breadcrumb .normal:after {
+	content: " /";
+}
+
+.contenttable {
+	width: 100%;
+}
+
+.contenttable td {
+	width: 25%;
+}

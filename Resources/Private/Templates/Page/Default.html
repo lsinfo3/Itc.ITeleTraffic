@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+
+<html class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Home | ITC - International Teletraffic Congress </title>
+	<f:section name="stylesheets">
+		<link rel="stylesheet" href="{f:uri.resource(path: 'css/style.css', package: 'Itc.ITeleTraffic')}" />
+	    <link rel="stylesheet" href="{f:uri.resource(path: 'css/responsive.css', package: 'Itc.ITeleTraffic')}" />
+      <link rel="stylesheet" href="{f:uri.resource(path: 'css/custom.css', package: 'Itc.ITeleTraffic')}" />
+	</f:section>
+	<f:section name="headScripts">
+		<script type="text/javascript" src="{f:uri.resource(path: 'js/responsive-nav.js', package: 'Itc.ITeleTraffic')}"></script>
+	</f:section>
+</head>
+
+<body>
+<f:section name="body">
+
+<div class="cont_top">
+
+     <nav class="in">
+         <ul class="links_top">
+             <li><a href="http://dev.donstudio.com/itc/contact.html">Contact</a></li>
+             <li><a href="http://dev.donstudio.com/itc/sitemap.html">Sitemap</a></li> 
+             <li><a href="/neos">Login</a></li>
+         </ul>
+     </nav>
+     
+     <header class="header">
+          <div class="in">
+               <a href="#"><img src="{f:uri.resource(path: 'assets/logo.png', package: 'Itc.ITeleTraffic')}" class="logo" alt=""></a>
+               <h1>The first international conference in<br> <span>networking science &amp; practice</span></h1>
+               <a href="http://dev.donstudio.com/itc/#" class="nav-toggle" aria-hidden="true">Menu</a>
+               {parts.menu -> f:format.raw()}
+               <script>
+                 var navigation = responsiveNav(".nav-collapse");
+               </script>
+          </div>
+     </header>
+     
+     <article class="slider">
+           <p>{content.teaser}</p>
+           <neos:link.node node="{content.teaserReference}">Learn More »</neos:link.node>
+           <br clear="all">
+     </article>
+     
+</div>     
+      
+<div class="in">
+          
+     <aside class="cont_left">
+       {parts.breadcrumb -> f:format.raw()}
+       {content.main -> f:format.raw()}
+    </aside>
+          
+    <nav class="cont_right">
+       {content.sidebar -> f:format.raw()}
+       <a href="http://dev.donstudio.com/itc/news.html" class="right_links">NEWS</a>
+       <a href="http://dev.donstudio.com/itc/contact.html" class="right_links">CONTACT US</a>
+       <a href="http://dev.donstudio.com/itc/#" class="right_links">WHAT’S NEW?</a>
+       <ul class="right_info">
+           <li> 
+              <h2><a href="http://dev.donstudio.com/itc/27_itc.html">27th International Teletraffic Congress</a></h2>
+              <span>2013.11.22 00:00</span>
+           </li>
+           <li> 
+              <h2><a href="http://dev.donstudio.com/itc/27_itc.html">In Memoriam: Arne Jensen</a></h2>
+              <span>2008.11.12 14:58</span>
+           </li>
+           <li> 
+              <h2><a href="http://dev.donstudio.com/itc/27_itc.html">27th International Teletraffic Congress</a></h2>
+              <span>2013.11.22 00:00</span>
+           </li>
+           <li> 
+              <h2><a href="http://dev.donstudio.com/itc/27_itc.html">In Memoriam: Arne Jensen</a></h2>
+              <span>2008.11.12 14:58</span>
+           </li>
+       </ul>
+    </nav>
+
+</div>
+     
+      
+<footer class="footer">
+  <div class="in">© 2014 <a href="http://dev.donstudio.com/itc/index.html">i-teletraffic.org</a></div>
+</footer> 
+
+</f:section>
+<f:section name="bodyScripts">
+	<!-- Put your scripts inclusions for the end of the body here, they will be included in your website by TypoScript -->
+</f:section>
+</body>
+</html>
