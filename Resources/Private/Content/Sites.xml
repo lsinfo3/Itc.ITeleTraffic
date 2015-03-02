@@ -1,40 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
- <site name="i-teletraffic.org" state="1" siteResourcesPackageKey="Itc.ITeleTraffic" siteNodeName="iteletraffic">
-  <nodes formatVersion="2.0">
-   <node nodeName="iteletraffic">
-    <variant workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
-     <dimensions>
-
-      <language>en_US</language>
-
-     </dimensions>
-     <properties>
-      <title __type="string">Home</title>
-     </properties>
-    </variant>
-    <node nodeName="main">
-     <variant workspace="live" nodeType="TYPO3.Neos:ContentCollection" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
-      <dimensions>
-
-       <language>en_US</language>
-
-      </dimensions>
-     </variant>
-     <node nodeName="text1">
-      <variant workspace="live" nodeType="TYPO3.Neos.NodeTypes:Text" sortingIndex="100" version="1" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-
-        <language>en_US</language>
-
-       </dimensions>
-       <properties>
-        <text __type="string">&lt;p&gt;This is the homepage&lt;/p&gt;</text>
-       </properties>
-      </variant>
-     </node>
-    </node>
-   </node>
-  </nodes>
- </site>
+    <site name="i-teletraffic.org" state="1" siteResourcesPackageKey="Itc.ITeleTraffic" siteNodeName="iteletraffic">
+        <nodes formatVersion="2.0">
+            <node identifier="6341649f-7279-1b46-dd1c-bc7642f46368" nodeName="iteletraffic">
+                <variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="2" removed="" hidden="" hiddenInIndex="">
+                    <dimensions>
+                        <language>en_US</language>
+                    </dimensions>
+                    <accessRoles __type="array" />
+                    <properties>
+                        <title __type="string">Home</title>
+                        <uriPathSegment __type="string">iteletraffic</uriPathSegment>
+                    </properties>
+                </variant>
+                <node identifier="30c90be0-04eb-e259-4d2a-3aceee5fc8d5" nodeName="home">
+                    <variant sortingIndex="150" workspace="live" nodeType="TYPO3.Neos:Shortcut" version="6" removed="" hidden="" hiddenInIndex="">
+                        <dimensions>
+                            <language>en_US</language>
+                        </dimensions>
+                        <properties>
+                            <uriPathSegment __type="string">home</uriPathSegment>
+                            <title __type="string">Home</title>
+                            <targetMode __type="string">parentNode</targetMode>
+                            <target __type="string"></target>
+                        </properties>
+                    </variant>
+                    <node identifier="d7b1fc6e-d065-8c2a-a35e-47ef0265c0dd" nodeName="main">
+                        <variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+                            <dimensions>
+                                <language>en_US</language>
+                            </dimensions>
+                            <accessRoles __type="array" />
+                            <properties />
+                        </variant>
+                    </node>
+                    <node identifier="bcaff744-308f-0f18-36e1-0cfe45129fc4" nodeName="sidebar">
+                        <variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+                            <dimensions>
+                                <language>en_US</language>
+                            </dimensions>
+                            <accessRoles __type="array" />
+                            <properties />
+                        </variant>
+                    </node>
+                    <node identifier="74dce356-34d0-6f5e-fff4-4582b21886de" nodeName="teaser">
+                        <variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+                            <dimensions>
+                                <language>en_US</language>
+                            </dimensions>
+                            <accessRoles __type="array" />
+                            <properties />
+                        </variant>
+                    </node>
+                </node>
+                <node identifier="76f48fcd-49d4-1baf-b78a-47235e564708" nodeName="main">
+                    <variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="1" removed="" hidden="" hiddenInIndex="">
+                        <dimensions>
+                            <language>en_US</language>
+                        </dimensions>
+                        <properties />
+                    </variant>
+                    <node identifier="3db45537-29b2-dc76-8943-2860ee3ae9ab" nodeName="text1">
+                        <variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Text" version="1" removed="" hidden="" hiddenInIndex="">
+                            <dimensions>
+                                <language>en_US</language>
+                            </dimensions>
+                            <accessRoles __type="array" />
+                            <properties>
+                                <text __type="string">&lt;p&gt;This is the homepage&lt;/p&gt;</text>
+                            </properties>
+                        </variant>
+                    </node>
+                </node>
+                <node identifier="84a0dbe6-3283-6eef-d56f-f31a172678f3" nodeName="news">
+                    <variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="4" removed="" hidden="" hiddenInIndex="">
+                        <dimensions>
+                            <language>en_US</language>
+                        </dimensions>
+                        <properties>
+                            <uriPathSegment __type="string">news</uriPathSegment>
+                            <title __type="string">News</title>
+                        </properties>
+                    </variant>
+                    <node identifier="6af8baff-c3cd-767c-4e24-9bca4240329b" nodeName="main">
+                        <variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+                            <dimensions>
+                                <language>en_US</language>
+                            </dimensions>
+                            <accessRoles __type="array" />
+                            <properties />
+                        </variant>
+                        <node identifier="1f2102b0-367d-5985-0b5d-850d9b0a2746" nodeName="node-54f462cc34f33">
+                            <variant sortingIndex="100" workspace="live" nodeType="Lelesys.News:List" version="4" removed="" hidden="" hiddenInIndex="">
+                                <dimensions>
+                                    <language>en_US</language>
+                                </dimensions>
+                                <accessRoles __type="array" />
+                                <properties>
+                                    <itemsPerPage __type="string"></itemsPerPage>
+                                    <maximumNumberOfLinks __type="string"></maximumNumberOfLinks>
+                                    <newsFolder __type="string">eaea4b62-7b4f-5390-5763-fadba3348044</newsFolder>
+                                    <dateFormat __type="string"></dateFormat>
+                                    <sortProperty __type="string"></sortProperty>
+                                    <sortOrder __type="string"></sortOrder>
+                                    <thumbnailMaxWidth __type="string"></thumbnailMaxWidth>
+                                    <thumbnailMaxHeight __type="string"></thumbnailMaxHeight>
+                                    <filterByCategories __type="array" />
+                                </properties>
+                            </variant>
+                        </node>
+                    </node>
+                    <node identifier="842478ac-1420-3382-4acc-e83376d5ddcf" nodeName="sidebar">
+                        <variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+                            <dimensions>
+                                <language>en_US</language>
+                            </dimensions>
+                            <accessRoles __type="array" />
+                            <properties />
+                        </variant>
+                    </node>
+                    <node identifier="0fe3822d-7280-ebfd-9382-bfc26d9ba226" nodeName="teaser">
+                        <variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+                            <dimensions>
+                                <language>en_US</language>
+                            </dimensions>
+                            <accessRoles __type="array" />
+                            <properties />
+                        </variant>
+                    </node>
+                </node>
+                <node identifier="eaea4b62-7b4f-5390-5763-fadba3348044" nodeName="posts">
+                    <variant sortingIndex="500" workspace="live" nodeType="Lelesys.News:Folder" version="8" removed="" hidden="" hiddenInIndex="1">
+                        <dimensions>
+                            <language>en_US</language>
+                        </dimensions>
+                        <properties>
+                            <uriPathSegment __type="string">posts</uriPathSegment>
+                            <title __type="string">Posts</title>
+                            <feedTitle __type="string"></feedTitle>
+                            <feedDescription __type="string"></feedDescription>
+                        </properties>
+                    </variant>
+                    <node identifier="591a5310-eef2-8862-6fd2-2c37a0fd1e41" nodeName="main">
+                        <variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="5" removed="" hidden="" hiddenInIndex="">
+                            <dimensions>
+                                <language>en_US</language>
+                            </dimensions>
+                            <accessRoles __type="array" />
+                            <properties />
+                        </variant>
+                    </node>
+                </node>
+                <node identifier="336dd330-fc81-2c0d-97a8-8c7fe62ac242" nodeName="sidebar">
+                    <variant sortingIndex="700" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+                        <dimensions>
+                            <language>en_US</language>
+                        </dimensions>
+                        <properties />
+                    </variant>
+                </node>
+                <node identifier="fee97e84-5892-bc02-173b-725a9baaffab" nodeName="teaser">
+                    <variant sortingIndex="600" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+                        <dimensions>
+                            <language>en_US</language>
+                        </dimensions>
+                        <properties />
+                    </variant>
+                </node>
+            </node>
+        </nodes>
+    </site>
 </root>
