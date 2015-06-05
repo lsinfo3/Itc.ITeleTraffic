@@ -50,7 +50,7 @@ page = Page {
 		}
 
     teaser = Itc.ITeleTraffic:Teaser {
-        teaserNode = ${q(site).find('teaser').get(0)}
+        node = ${q(site).find('teaser').get(0)}
 	nodePath = 'teaser'
     }
 
