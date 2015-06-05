@@ -11,29 +11,79 @@
         teaser:
           label: 'Teaser'
   properties:
-    teaser:
-      type: string
+    headerImage:
+      type: TYPO3\Media\Domain\Model\ImageVariant
       ui:
-        label: 'Teaser'
-        inlineEditable: TRUE
+        label: 'Header Image'
+        inlineEditable: FALSE
         reloadIfChanged: TRUE
         inspector:
           group: 'teaser'
-    teaserReference:
+  childNodes:
+    siteTitle:
+      type: 'TYPO3.Neos:ContentCollection'
+    teaser:
+      type: 'Itc.ITeleTraffic:Teaser'
+    main:
+      constraints:
+        nodeTypes:
+          'Itc.ITeleTraffic:Congress': FALSE
+    sidebar:
+      type: 'TYPO3.Neos:ContentCollection'
+
+'Itc.ITeleTraffic:SiteTitle':
+  superTypes: ['TYPO3.Neos.NodeTypes:Headline']
+  ui:
+    group: 'general'
+    label: 'Site Title'
+    inlineEditable: true
+  properties:
+    title:
+      type: string
+      defaultValue: '<h1>Enter headline here</h1>'
+      ui:
+        inlineEditable: TRUE
+        aloha:
+          'format':
+            'p': TRUE
+            'b': FALSE
+            'i': FALSE
+            'u': FALSE
+            'em': TRUE
+            'sub': FALSE
+            'sup': TRUE
+            'h1': TRUE
+            'h2': FALSE
+            'h3': FALSE
+            'h4': FALSE
+            'h5': FALSE
+            '*': FALSE
+          'table': []
+          'link': []
+          'list': []
+          'alignment': []
+          'formatlesspaste': []
+
+'Itc.ITeleTraffic:Teaser':
+  superTypes: ['TYPO3.Neos:Content', 'TYPO3.Neos.NodeTypes:TextMixin']
+  ui:
+    group: 'general'
+    label: 'Teaser'
+    inspector:
+      groups:
+        congress:
+          label: 'teaser'
+  properties:
+    text:
+      type: string
+      defaultValue: 'Enter Teaser Text...'
+    reference:
       type: reference
       ui:
         label: 'Link Target'
         reloadIfChanged: TRUE
         inspector:
           group: 'teaser'
-  childNodes:
-    main:
-      constraints:
-        nodeTypes:
-          'Itc.ITeleTraffic:Congress': FALSE
-
-    sidebar:
-      type: 'TYPO3.Neos:ContentCollection'
 
 'Itc.ITeleTraffic:Congress':
   superTypes: ['TYPO3.Neos:Content']
@@ -68,7 +118,7 @@
         label: 'Homepage URL'
         reloadIfChanged: TRUE
         inspector:
-          group: 'congress'    
+          group: 'congress'
     program:
       type: reference
       ui:

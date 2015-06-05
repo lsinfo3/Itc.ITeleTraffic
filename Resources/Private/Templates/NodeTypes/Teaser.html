@@ -1,0 +1,7 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+
+<neos:contentElement.wrap node="{teaserNode}">
+	<neos:contentElement.editable property="text" node="{teaserNode}" tag="p"/>
+	<neos:link.node node="{reference}">Learn More »</neos:link.node>
+	<br clear="all">
+</neos:contentElement.wrap>
