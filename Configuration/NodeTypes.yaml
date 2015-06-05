@@ -71,12 +71,16 @@
     label: 'Teaser'
     inspector:
       groups:
-        congress:
+        teaser:
           label: 'teaser'
   properties:
     text:
       type: string
+      inlineEditable: TRUE
       defaultValue: 'Enter Teaser Text...'
+      ui:
+        inspector:
+          group: 'teaser'
     reference:
       type: reference
       ui:

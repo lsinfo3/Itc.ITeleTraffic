@@ -50,7 +50,8 @@ page = Page {
 		}
 
     teaser = Itc.ITeleTraffic:Teaser {
-    //    teaserNode = ${q(site).find('teaser').get(0)}
+        teaserNode = ${q(site).find('teaser').get(0)}
+	nodePath = 'teaser'
     }
 
     siteTitle = TYPO3.Neos:ContentCollection {
