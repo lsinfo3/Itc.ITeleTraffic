@@ -48,39 +48,6 @@
     sidebar:
       type: 'TYPO3.Neos:ContentCollection'
 
-'Itc.ITeleTraffic:SiteTitle':
-  superTypes: ['TYPO3.Neos.NodeTypes:Headline']
-  ui:
-    group: 'general'
-    label: 'Site Title'
-    inlineEditable: true
-  properties:
-    title:
-      type: string
-      defaultValue: '<h1>Enter headline here</h1>'
-      ui:
-        inlineEditable: TRUE
-        aloha:
-          'format':
-            'p': TRUE
-            'b': FALSE
-            'i': FALSE
-            'u': FALSE
-            'em': TRUE
-            'sub': FALSE
-            'sup': TRUE
-            'h1': TRUE
-            'h2': FALSE
-            'h3': FALSE
-            'h4': FALSE
-            'h5': FALSE
-            '*': FALSE
-          'table': []
-          'link': []
-          'list': []
-          'alignment': []
-          'formatlesspaste': []
-
 'Itc.ITeleTraffic:Teaser':
   superTypes: ['TYPO3.Neos:Content', 'TYPO3.Neos.NodeTypes:TextMixin']
   ui:
