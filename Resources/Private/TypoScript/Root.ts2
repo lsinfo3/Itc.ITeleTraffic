@@ -50,14 +50,11 @@ page = Page {
 		}
 
     teaser = Itc.ITeleTraffic:Teaser {
-        node = ${q(site).find('teaser').get(0)}
-	nodePath = 'teaser'
+      node = ${q(site).find('teaser').get(0)}
+	    nodePath = 'teaser'
     }
 
-    siteTitle = TYPO3.Neos:ContentCollection {
-        nodePath = ${q(site).find('siteTitle').property('_path')}
-        collection = ${q(site).children('siteTitle').children()}
-    }
+    siteTitle = ${q(site).property('siteTitle')}
 
 		// These are your content areas, you can define as many as you want, just name them and the nodePath.
 		content {

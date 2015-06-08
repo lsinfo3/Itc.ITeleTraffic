@@ -8,8 +8,8 @@
   ui:
     inspector:
       groups:
-        teaser:
-          label: 'Teaser'
+        site:
+          label: 'Site'
   properties:
     headerImage:
       type: TYPO3\Media\Domain\Model\ImageVariant
@@ -18,10 +18,27 @@
         inlineEditable: FALSE
         reloadIfChanged: TRUE
         inspector:
-          group: 'teaser'
-  childNodes:
+          group: 'site'
     siteTitle:
-      type: 'TYPO3.Neos:ContentCollection'
+      type: string
+      defaultValue: '<h1>Enter Site Title Here</h1>'
+      ui:
+        label: 'Site Title'
+        inlineEditable: TRUE
+        aloha:
+          format:
+            sup: TRUE
+            removeFormat: TRUE
+          table: []
+          link: []
+          list: []
+          alignment: []
+          formatlesspaste':
+            button: FALSE
+            formatlessPasteOption: TRUE
+        inspector:
+          group: 'site'
+  childNodes:
     teaser:
       type: 'Itc.ITeleTraffic:Teaser'
     main:

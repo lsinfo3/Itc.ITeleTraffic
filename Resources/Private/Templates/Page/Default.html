@@ -34,7 +34,8 @@
           <div class="in">
                <a href="#"><img src="{f:uri.resource(path: 'assets/logo.png', package: 'Itc.ITeleTraffic')}" class="logo" alt=""></a>
 
-							{siteTitle -> f:format.raw()}
+							<neos:contentElement.editable property="siteTitle" tag="h1"/>
+
                <a href="http://dev.donstudio.com/itc/#" class="nav-toggle" aria-hidden="true">Menu</a>
                {parts.menu -> f:format.raw()}
                <script>
