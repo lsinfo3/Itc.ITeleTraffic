@@ -54,7 +54,10 @@ page = Page {
 	    nodePath = 'teaser'
     }
 
-    siteTitle = ${q(site).property('siteTitle')}
+    siteTitle = Itc.ITeleTraffic:SiteTitle {
+      node = ${q(site).find('siteTitle').get(0)}
+      nodePath = 'siteTitle'
+    }
 
 		// These are your content areas, you can define as many as you want, just name them and the nodePath.
 		content {
@@ -83,8 +86,13 @@ prototype(Itc.ITeleTraffic:Teaser) {
   text = ${q(site).find('teaser').property('text')}
 }
 
-prototype(Itc.ITeleTraffic:SiteTitle) < prototype(TYPO3.Neos:Content) {
-  templatePath = 'resource://TYPO3.Neos.NodeTypes/Private/Templates/NodeTypes/Headline.html'
+prototype(Itc.ITeleTraffic:SiteTitle) {
+  text = ${q(site).find('siteTitle').property('text')}
+}
+
+prototype(Itc.ITeleTraffic:ShortLink) < prototype(TYPO3.Neos:Content) {
+	text = ${q(node).property('text')}
+	reference = ${q(node).property('reference')}
 }
 
 prototype(Itc.ITeleTraffic:Congress) < prototype(TYPO3.Neos:Content) {
@@ -101,5 +109,13 @@ prototype(Itc.ITeleTraffic:Congresses) < prototype(TYPO3.Neos:Content) {
 		collection = ${q(node).children()}
 		itemRenderer = Itc.ITeleTraffic:Congress
 		itemName = 'node'
+	}
+}
+
+prototype(Lelesys.News:Latest) {
+  templatePath = 'resource://Itc.ITeleTraffic/Private/Templates/TypoScriptObjects/Latest.html'
+
+  newsItem {
+		templatePath = 'resource://Itc.ITeleTraffic/Private/Templates/TypoScriptObjects/LatestItem.html'
 	}
 }

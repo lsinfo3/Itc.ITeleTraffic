@@ -9,18 +9,21 @@
 <title>Home | ITC - International Teletraffic Congress </title>
 	<f:section name="stylesheets">
 		<link rel="stylesheet" href="{f:uri.resource(path: 'css/style.css', package: 'Itc.ITeleTraffic')}" />
-	    <link rel="stylesheet" href="{f:uri.resource(path: 'css/responsive.css', package: 'Itc.ITeleTraffic')}" />
-      <link rel="stylesheet" href="{f:uri.resource(path: 'css/custom.css', package: 'Itc.ITeleTraffic')}" />
+	  <link rel="stylesheet" href="{f:uri.resource(path: 'css/responsive.css', package: 'Itc.ITeleTraffic')}" />
+    <link rel="stylesheet" href="{f:uri.resource(path: 'css/custom.css', package: 'Itc.ITeleTraffic')}" />
 	</f:section>
+
 	<f:section name="headScripts">
 		<script type="text/javascript" src="{f:uri.resource(path: 'js/responsive-nav.js', package: 'Itc.ITeleTraffic')}"></script>
+		<script type="text/javascript" src="{f:uri.resource(path: 'js/jquery.js', package: 'Itc.ITeleTraffic')}"></script>
+		<script type="text/javascript" src="{f:uri.resource(path: 'js/parallax.js', package: 'Itc.ITeleTraffic')}"></script>
 	</f:section>
 </head>
 
 <body>
 <f:section name="body">
 
-		<div class="cont_top" style="background: url({media:uri.image(image:content.headerImage)})">
+		<div class="cont_top parallax-window" data-parallax="scroll" data-image-src="{media:uri.image(image:content.headerImage)}">
 
 		 <nav class="in">
          <ul class="links_top">
@@ -34,9 +37,8 @@
           <div class="in">
                <a href="#"><img src="{f:uri.resource(path: 'assets/logo.png', package: 'Itc.ITeleTraffic')}" class="logo" alt=""></a>
 
-							<neos:contentElement.editable property="siteTitle" tag="h1"/>
+							 {siteTitle -> f:format.raw()}
 
-               <a href="http://dev.donstudio.com/itc/#" class="nav-toggle" aria-hidden="true">Menu</a>
                {parts.menu -> f:format.raw()}
                <script>
                  var navigation = responsiveNav(".nav-collapse");
@@ -51,7 +53,6 @@
 </div>
 
 <div class="in">
-
      <aside class="cont_left">
        {parts.breadcrumb -> f:format.raw()}
        {content.main -> f:format.raw()}
@@ -59,29 +60,7 @@
 
     <nav class="cont_right">
        {content.sidebar -> f:format.raw()}
-       <a href="http://dev.donstudio.com/itc/news.html" class="right_links">NEWS</a>
-       <a href="http://dev.donstudio.com/itc/contact.html" class="right_links">CONTACT US</a>
-       <a href="http://dev.donstudio.com/itc/#" class="right_links">WHAT’S NEW?</a>
-       <ul class="right_info">
-           <li>
-              <h2><a href="http://dev.donstudio.com/itc/27_itc.html">27th International Teletraffic Congress</a></h2>
-              <span>2013.11.22 00:00</span>
-           </li>
-           <li>
-              <h2><a href="http://dev.donstudio.com/itc/27_itc.html">In Memoriam: Arne Jensen</a></h2>
-              <span>2008.11.12 14:58</span>
-           </li>
-           <li>
-              <h2><a href="http://dev.donstudio.com/itc/27_itc.html">27th International Teletraffic Congress</a></h2>
-              <span>2013.11.22 00:00</span>
-           </li>
-           <li>
-              <h2><a href="http://dev.donstudio.com/itc/27_itc.html">In Memoriam: Arne Jensen</a></h2>
-              <span>2008.11.12 14:58</span>
-           </li>
-       </ul>
     </nav>
-
 </div>
 
 

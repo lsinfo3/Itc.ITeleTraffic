@@ -9,3 +9,11 @@
 .contenttable td {
 	width: 25%;
 }
+
+.news-overview {
+	margin-top: 30px;
+}
+
+.right_links {
+	text-transform: uppercase;
+}

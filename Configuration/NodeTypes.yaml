@@ -19,26 +19,9 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'site'
-    siteTitle:
-      type: string
-      defaultValue: '<h1>Enter Site Title Here</h1>'
-      ui:
-        label: 'Site Title'
-        inlineEditable: TRUE
-        aloha:
-          format:
-            sup: TRUE
-            removeFormat: TRUE
-          table: []
-          link: []
-          list: []
-          alignment: []
-          formatlesspaste':
-            button: FALSE
-            formatlessPasteOption: TRUE
-        inspector:
-          group: 'site'
   childNodes:
+    siteTitle:
+      type: 'Itc.ITeleTraffic:SiteTitle'
     teaser:
       type: 'Itc.ITeleTraffic:Teaser'
     main:
@@ -47,6 +30,39 @@
           'Itc.ITeleTraffic:Congress': FALSE
     sidebar:
       type: 'TYPO3.Neos:ContentCollection'
+
+'Itc.ITeleTraffic:SiteTitle':
+  superTypes: ['TYPO3.Neos:Content', 'TYPO3.Neos.NodeTypes:TextMixin']
+  ui:
+    group: 'general'
+    label: 'Site Title'
+    inspector:
+      groups:
+        siteTitle:
+          label: 'Site Title'
+  properties:
+    text:
+      type: string
+      inlineEditable: TRUE
+      defaultValue: 'Enter Teaser Text...'
+      ui:
+        aloha:
+          'format':
+            '*': FALSE
+            'p': FALSE
+            'h1': FALSE
+            'h2': FALSE
+            'h3': FALSE
+            'sup': TRUE
+          'table': []
+          'link': []
+          'list': []
+          'alignment': []
+          'formatlesspaste':
+            'button': FALSE
+            'formatlessPasteOption': TRUE
+        inspector:
+          group: 'siteTitle'
 
 'Itc.ITeleTraffic:Teaser':
   superTypes: ['TYPO3.Neos:Content', 'TYPO3.Neos.NodeTypes:TextMixin']
@@ -72,6 +88,31 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'teaser'
+
+'Itc.ITeleTraffic:ShortLink':
+  superTypes: ['TYPO3.Neos:Content']
+  ui:
+    group: 'general'
+    label: 'Short Link'
+    inspector:
+      groups:
+        shortLink:
+          label: 'Short Link'
+  properties:
+    text:
+      type: string
+      inlineEditable: TRUE
+      defaultValue: 'Enter Short Link Text...'
+      ui:
+        inspector:
+          group: 'shortLink'
+    reference:
+      type: reference
+      ui:
+        label: 'Link Target'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shortLink'
 
 'Itc.ITeleTraffic:Congress':
   superTypes: ['TYPO3.Neos:Content']

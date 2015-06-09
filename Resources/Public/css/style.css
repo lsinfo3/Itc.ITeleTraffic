@@ -21,22 +21,22 @@ body{
 }
 @font-face {
     font-family: 'OpenSansBold';
-    src: url('/_Resources/Static/Packages/Itc.ITeleTraffic/font/OpenSans-Bold-webfont.eot');
-    src: url('/_Resources/Static/Packages/Itc.ITeleTraffic/font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/_Resources/Static/Packages/Itc.ITeleTraffic//font/OpenSans-Bold-webfont.woff') format('woff'),
-         url('/_Resources/Static/Packages/Itc.ITeleTraffic//font/OpenSans-Bold-webfont.ttf') format('truetype'),
-         url('/_Resources/Static/Packages/Itc.ITeleTraffic//font/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
+    src: url('../font/OpenSans-Bold-webfont.eot');
+    src: url('../font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/OpenSans-Bold-webfont.woff') format('woff'),
+         url('../font/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('../font/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-
 
 img{border:none;}
 .img{float:left;}
 
 p{margin:15px 0;}
 
-a, a:hover, input[type=submit], input[type=submit]:hover{
+a, a:hover, input[type=submit], input[type=submit]:hover,
+.soc_r a img, .soc_r a:hover img{
 	text-decoration:none;
 	-webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -63,6 +63,7 @@ h2{
 	width:100%;
 	float:left;
 	min-height:540px;
+	/*background:url(../assets/bg_top.jpg) top no-repeat;*/
 	background-size:100%;
 	}
 
@@ -80,7 +81,7 @@ h2{
 .links_top li{
 	float:left;
 	padding:0 7px;
-	background:url(/_Resources/Static/Packages/Itc.ITeleTraffic/assets/links_top_bg.jpg) right center no-repeat;
+	background:url(../assets/links_top_bg.jpg) right center no-repeat;
 	}
 .links_top li a{
 	font-size:12px;
@@ -111,6 +112,7 @@ h2{
 	float:left;
 	}
 .header h1{
+	float:left;
 	font-size:30px;
 	color:#BF2C2C;
 	line-height:40px;
@@ -195,16 +197,16 @@ h2{
 .nav-collapse li a:hover{
 	color:#000 !important;
 	}
-.nav-collapse li.active a{
+.nav-collapse li a.active{
 	font-family: 'OpenSansBold';
-}
-
-.nav-collapse li a:current {
-	font-family: 'OpenSansBold';
-}
+	}
+.nav-collapse li a.active:hover{
+	color:#BF2C2C !important;
+	}
 
 /** SLIDER **/
 .slider{
+	width:100%;
 	max-width:1330px;
 	margin:0 auto;
 	padding:20px 0 0 0;
@@ -533,4 +535,23 @@ ul h2{
 	}
 .cont6{
 	width:96%;
+	}
+
+.parallax-window {
+    min-height: 540px;
+    background: transparent;
+}
+
+.soc_r{
+	float:right;
+	}
+.soc_r img{
+	float:left;
+	margin-left:20px;
+	opacity: .8;
+    filter: alpha(opacity=80);
+	}
+.soc_r a:hover img{
+	opacity: 1.0;
+    filter: alpha(opacity=100);
 	}
