@@ -23,7 +23,14 @@
 <body>
 <f:section name="body">
 
-		<div class="cont_top parallax-window" data-parallax="scroll" data-image-src="{media:uri.image(image:content.headerImage)}">
+	<f:if condition="{content.headerImage}">
+		<f:then>
+			<div class="cont_top parallax-window" data-parallax="scroll" data-image-src="{media:uri.image(image:content.headerImage)}">
+		</f:then>
+		<f:else>
+			<div class="cont_top parallax-window" data-parallax="scroll" data-image-src="{f:uri.resource(path: 'assets/bg_top.jpg', package: 'Itc.ITeleTraffic')}">
+		</f:else>
+	</f:if>
 
 		 <nav class="in">
          <ul class="links_top">

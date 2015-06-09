@@ -44,7 +44,7 @@
     text:
       type: string
       inlineEditable: TRUE
-      defaultValue: 'Enter Teaser Text...'
+      defaultValue: 'Enter Site Title...'
       ui:
         aloha:
           'format':
