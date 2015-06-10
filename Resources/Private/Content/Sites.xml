@@ -1,5 +1,5 @@
-
-ot>
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
     <site name="i-teletraffic.org" state="1" siteResourcesPackageKey="Itc.ITeleTraffic" siteNodeName="iteletraffic">
         <nodes formatVersion="2.0">
             <node identifier="6341649f-7279-1b46-dd1c-bc7642f46368" nodeName="iteletraffic">
