@@ -66,8 +66,9 @@ page = Page {
 				nodePath = 'main'
 			}
 
-			sidebar = PrimaryContent {
-				nodePath = 'sidebar'
+			sidebar = ContentCollection {
+				nodePath = ${q(site).find('sidebar').property('_path')}
+        collection = ${q(site).children('sidebar').children()}
 			}
 
       headerImage = ${q(site).property('headerImage')}

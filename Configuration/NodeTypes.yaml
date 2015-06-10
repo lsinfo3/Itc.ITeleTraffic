@@ -50,7 +50,7 @@
           'format':
             '*': FALSE
             'p': FALSE
-            'h1': FALSE
+            'h1': TRUE
             'h2': FALSE
             'h3': FALSE
             'sup': TRUE

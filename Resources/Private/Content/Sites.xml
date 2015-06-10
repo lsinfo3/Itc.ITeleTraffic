@@ -1,5 +1,5 @@
-?xml version="1.0" encoding="UTF-8"?>
-<root>
+
+ot>
     <site name="i-teletraffic.org" state="1" siteResourcesPackageKey="Itc.ITeleTraffic" siteNodeName="iteletraffic">
         <nodes formatVersion="2.0">
             <node identifier="6341649f-7279-1b46-dd1c-bc7642f46368" nodeName="iteletraffic">
@@ -13,6 +13,58 @@
                         <uriPathSegment __type="string">iteletraffic</uriPathSegment>
                     </properties>
                 </variant>
+                <node identifier="f8cac146-332f-e1ed-e53c-8cafe08e51f2" nodeName="about-itc">
+                    <variant sortingIndex="750" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="4" removed="" hidden="" hiddenInIndex="">
+                        <dimensions>
+                            <language>en_US</language>
+                        </dimensions>
+                        <accessRoles __type="array"/>
+                        <properties>
+                            <uriPathSegment __type="string">about-itc</uriPathSegment>
+                            <title __type="string">About ITC</title>
+                        </properties>
+                    </variant>
+                    <node identifier="03c8b831-ca9c-e8e7-1abf-58cb7812ff66" nodeName="main">
+                        <variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+                            <dimensions>
+                                <language>en_US</language>
+                            </dimensions>
+                            <accessRoles __type="array"/>
+                            <properties/>
+                        </variant>
+                    </node>
+                    <node identifier="9903d110-b6ab-2c81-db05-e98046e10ce2" nodeName="sidebar">
+                        <variant sortingIndex="400" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+                            <dimensions>
+                                <language>en_US</language>
+                            </dimensions>
+                            <accessRoles __type="array"/>
+                            <properties/>
+                        </variant>
+                    </node>
+                    <node identifier="a4bb7348-8cbc-1378-3c4c-259d112987af" nodeName="siteTitle">
+                        <variant sortingIndex="300" workspace="live" nodeType="Itc.ITeleTraffic:SiteTitle" version="3" removed="" hidden="" hiddenInIndex="">
+                            <dimensions>
+                                <language>en_US</language>
+                            </dimensions>
+                            <accessRoles __type="array"/>
+                            <properties>
+                                <text __type="string">Enter Site Title...</text>
+                            </properties>
+                        </variant>
+                    </node>
+                    <node identifier="53f9bfe3-bbef-9d7f-e908-9791236a9401" nodeName="teaser">
+                        <variant sortingIndex="200" workspace="live" nodeType="Itc.ITeleTraffic:Teaser" version="3" removed="" hidden="" hiddenInIndex="">
+                            <dimensions>
+                                <language>en_US</language>
+                            </dimensions>
+                            <accessRoles __type="array"/>
+                            <properties>
+                                <text __type="string">Enter Teaser Text...</text>
+                            </properties>
+                        </variant>
+                    </node>
+                </node>
                 <node identifier="30c90be0-04eb-e259-4d2a-3aceee5fc8d5" nodeName="home">
                     <variant sortingIndex="150" workspace="live" nodeType="TYPO3.Neos:Shortcut" version="6" removed="" hidden="" hiddenInIndex="">
                         <dimensions>
@@ -99,14 +151,7 @@
                                 </dimensions>
                                 <accessRoles __type="array"/>
                                 <properties>
-                                    <itemsPerPage __type="string"></itemsPerPage>
-                                    <maximumNumberOfLinks __type="string"></maximumNumberOfLinks>
                                     <newsFolder __type="string">79933458-4b5d-cc15-4f00-065aedda0c98</newsFolder>
-                                    <dateFormat __type="string"></dateFormat>
-                                    <sortProperty __type="string"></sortProperty>
-                                    <sortOrder __type="string"></sortOrder>
-                                    <thumbnailMaxWidth __type="string"></thumbnailMaxWidth>
-                                    <thumbnailMaxHeight __type="string"></thumbnailMaxHeight>
                                     <filterByCategories __type="array"/>
                                 </properties>
                             </variant>
@@ -153,8 +198,6 @@
                         <properties>
                             <uriPathSegment __type="string">posts</uriPathSegment>
                             <title __type="string">Posts</title>
-                            <feedTitle __type="string"></feedTitle>
-                            <feedDescription __type="string"></feedDescription>
                         </properties>
                     </variant>
                     <node identifier="5dbf0d47-efec-6af0-9740-25faa4f05b17" nodeName="main">
@@ -194,36 +237,30 @@
                             <accessRoles __type="array"/>
                             <properties>
                                 <newsFolder __type="string">79933458-4b5d-cc15-4f00-065aedda0c98</newsFolder>
-                                <dateFormat __type="string"></dateFormat>
-                                <sortProperty __type="string"></sortProperty>
-                                <sortOrder __type="string"></sortOrder>
-                                <thumbnailMaxWidth __type="string"></thumbnailMaxWidth>
-                                <thumbnailMaxHeight __type="string"></thumbnailMaxHeight>
                                 <filterByCategories __type="array"/>
-                                <numberOfItems __type="string"></numberOfItems>
                             </properties>
                         </variant>
                     </node>
                 </node>
                 <node identifier="a97aed2d-1bdb-2a6a-db16-5079c170049e" nodeName="siteTitle">
-                    <variant sortingIndex="350" workspace="live" nodeType="Itc.ITeleTraffic:SiteTitle" version="2" removed="" hidden="" hiddenInIndex="">
+                    <variant sortingIndex="350" workspace="live" nodeType="Itc.ITeleTraffic:SiteTitle" version="3" removed="" hidden="" hiddenInIndex="">
                         <dimensions>
                             <language>en_US</language>
                         </dimensions>
                         <accessRoles __type="array"/>
                         <properties>
-                            <text __type="string">Enter Site Title...</text>
+                            <text __type="string">&lt;h1&gt;The first international conference in&lt;br/&gt;networking science &amp;amp; practice&lt;br/&gt;&lt;/h1&gt;</text>
                         </properties>
                     </variant>
                 </node>
                 <node identifier="5422e100-8761-3682-5581-707128235261" nodeName="teaser">
-                    <variant sortingIndex="250" workspace="live" nodeType="Itc.ITeleTraffic:Teaser" version="2" removed="" hidden="" hiddenInIndex="">
+                    <variant sortingIndex="250" workspace="live" nodeType="Itc.ITeleTraffic:Teaser" version="3" removed="" hidden="" hiddenInIndex="">
                         <dimensions>
                             <language>en_US</language>
                         </dimensions>
                         <accessRoles __type="array"/>
                         <properties>
-                            <text __type="string">Enter Teaser Text...</text>
+                            <text __type="string">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh ...</text>
                         </properties>
                     </variant>
                 </node>
