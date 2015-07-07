@@ -30,6 +30,8 @@
           'Itc.ITeleTraffic:Congress': FALSE
     sidebar:
       type: 'TYPO3.Neos:ContentCollection'
+    localSidebar:
+      type: 'TYPO3.Neos:ContentCollection'
 
 'Itc.ITeleTraffic:SiteTitle':
   superTypes: ['TYPO3.Neos:Content', 'TYPO3.Neos.NodeTypes:TextMixin']

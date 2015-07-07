@@ -68,8 +68,12 @@ page = Page {
 
 			sidebar = ContentCollection {
 				nodePath = ${q(site).find('sidebar').property('_path')}
-        collection = ${q(site).children('sidebar').children()}
+        			collection = ${q(site).children('sidebar').children()}
 			}
+			localSidebar = ContentCollection {
+                                nodePath = ${q(node).find('localSidebar').property('_path')}
+                                collection = ${q(node).children('localSidebar').children()}
+                        }
 
       headerImage = ${q(site).property('headerImage')}
 
