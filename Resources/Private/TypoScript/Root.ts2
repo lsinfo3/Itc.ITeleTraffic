@@ -71,6 +71,7 @@ page = Page {
         			collection = ${q(site).children('sidebar').children()}
 			}
 			localSidebar = ContentCollection {
+			//	templatePath = 'resource://Itc.ITeleTraffic/Private/Templates/NodeTypes/Menu.html
                                 nodePath = ${q(node).find('localSidebar').property('_path')}
                                 collection = ${q(node).children('localSidebar').children()}
                         }
@@ -100,6 +101,10 @@ prototype(Itc.ITeleTraffic:ShortLink) < prototype(TYPO3.Neos:Content) {
 	reference = ${q(node).property('reference')}
 }
 
+prototype(Itc.ITeleTraffic:SidebarHeadline) < prototype(TYPO3.Neos:Content) {
+	text = ${q(node).property('text')}
+}
+
 prototype(Itc.ITeleTraffic:Congress) < prototype(TYPO3.Neos:Content) {
 	templatePath = 'resource://Itc.ITeleTraffic/Private/Templates/TypoScriptObjects/Congress.html'
 	name = ${q(node).property('name')}
@@ -123,4 +128,8 @@ prototype(Lelesys.News:Latest) {
   newsItem {
 		templatePath = 'resource://Itc.ITeleTraffic/Private/Templates/TypoScriptObjects/LatestItem.html'
 	}
+}
+
+prototype(Itc.ITeleTraffic:LocalSidebarMenu) < prototype(TYPO3.Neos.NodeTypes:Menu) {
+
 }

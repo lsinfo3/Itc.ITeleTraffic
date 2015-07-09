@@ -81,6 +81,7 @@
       inlineEditable: TRUE
       defaultValue: 'Enter Teaser Text...'
       ui:
+        label: 'Text'
         inspector:
           group: 'teaser'
     reference:
@@ -115,6 +116,25 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'shortLink'
+
+'Itc.ITeleTraffic:SidebarHeadline':
+  superTypes: ['TYPO3.Neos:Content']
+  ui:
+    group: 'general'
+    label: 'Sidebar Headline'
+    inspector:
+      groups:
+        sidebarHeadline:
+          label: 'Sidebar Headline'
+  properties:
+    text:
+      type: string
+      inlineEditable: TRUE
+      defaultValue: 'Enter Headline...'
+      ui:
+        label: 'Headline'
+        inspector:
+          group: 'sidebarHeadline'
 
 'Itc.ITeleTraffic:Congress':
   superTypes: ['TYPO3.Neos:Content']
@@ -168,4 +188,11 @@
   ui:
     group: 'general'
     label: 'Congresses'
+    inlineEditable: true
+
+'Itc.ITeleTraffic:LocalSidebarMenu':
+  superTypes: ['TYPO3.Neos.NodeTypes:Menu']
+  ui:
+    group: 'general'
+    label: 'Local Sidebar Menu'
     inlineEditable: true
