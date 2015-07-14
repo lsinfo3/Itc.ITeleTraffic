@@ -70,10 +70,10 @@ page = Page {
 				nodePath = ${q(site).find('sidebar').property('_path')}
         			collection = ${q(site).children('sidebar').children()}
 			}
-			localSidebar = ContentCollection {
+			localsidebar = ContentCollection {
 			//	templatePath = 'resource://Itc.ITeleTraffic/Private/Templates/NodeTypes/Menu.html
-                                nodePath = ${q(node).find('localSidebar').property('_path')}
-                                collection = ${q(node).children('localSidebar').children()}
+                                nodePath = ${q(node).find('localsidebar').property('_path')}
+                                collection = ${q(node).children('localsidebar').children()}
                         }
 
       headerImage = ${q(site).property('headerImage')}
