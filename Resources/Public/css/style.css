@@ -567,3 +567,15 @@ ul h2{
     -moz-column-count: 3;
     column-count: 3;
 }
+
+.typo3-neos-alignment-left {
+        float:left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+}
+
+.typo3-neos-alignment-right {
+        float:right;
+        margin-left: 10px;
+        margin-bottom: 10px;
+}
