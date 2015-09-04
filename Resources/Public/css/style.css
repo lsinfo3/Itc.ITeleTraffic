@@ -330,6 +330,9 @@ h2{
 	padding-bottom:0;
 	border-bottom:none;
 	}
+.typo3-neos-nodetypes-menu li{
+        list-style:none;
+        }
 
 /** FOOTER **/
 .footer{
