@@ -1,6 +1,8 @@
 /**
  * Root TypoScript template for the i-teletraffic.org site
  */
+include : resource://Ls3.Itcreg/Private/TypoScript/Plugin.ts2
+
 page = Page {
 	head {
 		stylesheets.site = TYPO3.TypoScript:Template {
@@ -133,3 +135,5 @@ prototype(Lelesys.News:Latest) {
 prototype(Itc.ITeleTraffic:LocalSidebarMenu) < prototype(TYPO3.Neos.NodeTypes:Menu) {
 
 }
+
+prototype(Lelesys.News:List).newsItem.templatePath = 'resource://Itc.ITeleTraffic/Private/Templates/TypoScriptObjects/ListItem.html'

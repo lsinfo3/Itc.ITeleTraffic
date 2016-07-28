@@ -40,7 +40,7 @@
 
      <header class="header">
           <div class="in">
-	<a href="http://itc28.org/"><img src="{f:uri.resource(path: 'assets/logo.png', package: 'Itc.ITeleTraffic')}" class="logo" alt=""></a>
+	<a href="/"><img src="{f:uri.resource(path: 'assets/logo.png', package: 'Itc.ITeleTraffic')}" class="logo" alt=""></a>
 
 							 {siteTitle -> f:format.raw()}
 
@@ -64,15 +64,15 @@
     </aside>
 
     <nav class="cont_right">
-       {content.sidebar -> f:format.raw()}
 	{content.localsidebar -> f:format.raw()}
+	{content.sidebar -> f:format.raw()}
     </nav>
 </div>
 
 
 <footer class="footer">
   <div class="in">
-	© 2015 <a href="http://www.i-teletraffic.org">i-teletraffic.org</a> | <a href="http://itc28.org/en/impressum.html">Impressum</a>  &nbsp; 
+	©2016 <a href="http://www.i-teletraffic.org">i-teletraffic.org</a> | <a href="/en/impressum.html">Impressum</a>  &nbsp; 
 	<a href="https://twitter.com/ITC_Tweets" alt="Join Us on Twitter!" target="_blank"><img src="{f:uri.resource(path: 'assets/twss_icon.png', package: 'Itc.ITeleTraffic')}" width="25" alt=""></a> &nbsp; 
 	<a href="https://www.linkedin.com/grp/home?gid=8260384" target="_blank" alt="Join Us on Linked.in!"><img src="{f:uri.resource(path: 'assets/li_icon.png', package: 'Itc.ITeleTraffic')}" width="25" alt=""></a>
  </div>
