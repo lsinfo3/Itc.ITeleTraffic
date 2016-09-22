@@ -2,6 +2,7 @@
  * Root TypoScript template for the i-teletraffic.org site
  */
 //include: resource://ITC.Pups/Private/TypoScript/Plugin.ts2
+include: Carousel.ts2
 
 page = Page {
 	head {

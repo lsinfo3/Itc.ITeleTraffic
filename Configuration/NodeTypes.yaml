@@ -216,3 +216,14 @@
         label: 'ITC Conference Number (Double Digits)'
         inspector:
           group: 'plugin'
+
+'Itc.ITeletraffic:Carousel':
+  superTypes: ['TYPO3.Neos:Content']
+  childNodes:
+    carouselItems:
+      type: 'TYPO3.Neos:ContentCollection'
+  ui:
+    label: 'ITC Carousel'
+    group: 'plugins'
+    icon: 'icon-picture'
+    inlineEditable: TRUE

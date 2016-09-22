@@ -1,0 +1,22 @@
+prototype(Itc.ITeletraffic:Carousel) {
+        carouselItems = TYPO3.Neos:ContentCollection {
+                nodePath = 'carouselItems'
+                iterationName = 'carouselItemsIteration'
+                attributes.class = 'carousel-inner'
+        }
+
+        // Collect the carousels children but only images
+        carouselItemArray = ${q(node).children('carouselItems').children('[instanceof TYPO3.Neos.NodeTypes:Image]')}
+
+        // Enhance image prototype when inside the carousel
+        prototype(TYPO3.Neos.NodeTypes:Image) {
+                // Render images in the carousel with a special template.
+                templatePath = 'resource://Vendor.Site/Private/Templates/TypoScriptObjects/CarouselItem.html'
+
+                // The first item should later be marked as active
+                attributes.class = ${'item' + (carouselItemsIteration.isFirst ? ' active' : '')}
+
+                // We want to use the item iterator in fluid so we have to store it as variable.
+                iteration = ${carouselItemsIteration}
+        }
+}
