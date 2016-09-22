@@ -1,0 +1,37 @@
+.breadcrumb .normal:after {
+	content: " /";
+}
+
+.contenttable {
+	width: 100%;
+}
+
+.contenttable td {
+	width: 25%;
+}
+
+.news-overview {
+	margin-top: 30px;
+}
+
+.right_links {
+	text-transform: uppercase;
+}
+
+.typo3-widget-paginator {
+        list-style-type: none;
+        float: right;
+}
+
+.typo3-widget-paginator li{
+        float: left;
+        margin-right: 5px;
+}
+
+html.js body div.in nav.cont_right div.neos-contentcollection a.right_links {
+        clear: both;
+}
+
+.tags {
+        Display: none;
+}

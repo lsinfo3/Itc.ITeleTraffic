@@ -1,0 +1,34 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+
+
+<f:section name="Title">ITC Publications</f:section>
+
+<f:section name="Content">
+    <link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'CSS/bibsonomy.css')}"/>
+
+    <script type="text/javascript" src="{f:uri.resource(path: 'js/bibsonomy.js')}"></script>
+    <script type="text/javascript" src="{f:uri.resource(path: 'js/jquery-1.9.1.min.js')}"></script>
+    <script type="text/javascript" src="{f:uri.resource(path: 'js/jquery.activity-indicator-1.0.0.min.js')}"></script>
+
+
+    <script>
+        $(document).ready(function() {
+                initBibsonomy();
+                document.getElementById("Publications").id="current";
+        });
+    </script>
+
+    <h2>ITC "{text}"</h2>
+    <h3><f:debug title="Results of customers query">{_all}</f:debug></h3>
+    <div id="contentContainer">
+        <div id="content">
+                <p>Browse the ITC publications of previous conferences below or visit our <a href="http://www.bibsonomy.org/cv/user/itc">grouppage</a> at <code>bibsonomy.org</code></p>
+                <p>Search: <input type="text" bibType="filter" bibsonomyUrl="user/itc"></input>
+                <span class="bibInfo" bibType="info" bibsonomyUrl="user/itc"></span></p>
+
+                <div class="content" bibType="ref-list" bibsonomyUrl="user/itc" filter="" filterTag="itc17"></div>
+        </div id="content">
+   </div id="contentContainer">
+
+
+</f:section>

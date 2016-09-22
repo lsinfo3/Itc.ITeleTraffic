@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace media=TYPO3\Media\ViewHelpers}
+
+
+<html class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Home | ITC - International Teletraffic Congress </title>
+	<f:section name="stylesheets">
+		<link rel="stylesheet" href="{f:uri.resource(path: 'css/style.css', package: 'Itc.ITeleTraffic')}" />
+	  <link rel="stylesheet" href="{f:uri.resource(path: 'css/responsive.css', package: 'Itc.ITeleTraffic')}" />
+    <link rel="stylesheet" href="{f:uri.resource(path: 'css/custom.css', package: 'Itc.ITeleTraffic')}" />
+	</f:section>
+
+	<f:section name="headScripts">
+		<script type="text/javascript" src="{f:uri.resource(path: 'js/responsive-nav.js', package: 'Itc.ITeleTraffic')}"></script>
+		<script type="text/javascript" src="{f:uri.resource(path: 'js/jquery.js', package: 'Itc.ITeleTraffic')}"></script>
+		<script type="text/javascript" src="{f:uri.resource(path: 'js/parallax.js', package: 'Itc.ITeleTraffic')}"></script>
+	</f:section>
+</head>
+
+<body>
+<f:section name="body">
+
+	<f:if condition="{content.headerImage}">
+		<f:then>
+			<div class="cont_top parallax-window" data-parallax="scroll" data-image-src="{media:uri.image(image:content.headerImage)}">
+		</f:then>
+		<f:else>
+			<div class="cont_top parallax-window" data-parallax="scroll" data-image-src="{f:uri.resource(path: 'assets/bg_top.jpg', package: 'Itc.ITeleTraffic')}">
+		</f:else>
+	</f:if>
+
+		 <nav class="in">
+         <ul class="links_top">
+             <li><a href="/neos">Login</a></li>
+         </ul>
+     </nav>
+
+     <header class="header">
+          <div class="in">
+	<a href="/"><img src="{f:uri.resource(path: 'assets/logo.png', package: 'Itc.ITeleTraffic')}" class="logo" alt=""></a>
+
+							 {siteTitle -> f:format.raw()}
+
+               {parts.menu -> f:format.raw()}
+               <script>
+                 var navigation = responsiveNav(".nav-collapse");
+               </script>
+          </div>
+     </header>
+
+     <article class="slider">
+					 {teaser -> f:format.raw()}
+     </article>
+
+</div>
+
+<div class="in">
+     <aside class="cont_left">
+       {parts.breadcrumb -> f:format.raw()}
+       {content.main -> f:format.raw()}
+    </aside>
+
+    <nav class="cont_right">
+	{content.localsidebar -> f:format.raw()}
+	{content.sidebar -> f:format.raw()}
+    </nav>
+</div>
+
+
+<footer class="footer">
+  <div class="in">
+	© 2016 <a href="http://www.i-teletraffic.org">i-teletraffic.org</a> | <a href="/en/impressum.html">Impressum</a>  &nbsp; 
+	<a href="https://twitter.com/ITC_Tweets" alt="Join Us on Twitter!" target="_blank"><img src="{f:uri.resource(path: 'assets/twss_icon.png', package: 'Itc.ITeleTraffic')}" width="25" alt=""></a> &nbsp; 
+	<a href="https://www.linkedin.com/grp/home?gid=8260384" target="_blank" alt="Join Us on Linked.in!"><img src="{f:uri.resource(path: 'assets/li_icon.png', package: 'Itc.ITeleTraffic')}" width="25" alt=""></a>
+ </div>
+</footer>
+
+</f:section>
+<f:section name="bodyScripts">
+	<!-- Put your scripts inclusions for the end of the body here, they will be included in your website by TypoScript -->
+</f:section>
+</body>
+</html>

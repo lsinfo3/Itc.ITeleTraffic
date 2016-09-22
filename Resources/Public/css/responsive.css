@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media (max-width: 1400px){
+	.cont_top{
+		background-size:cover;
+		}
+	}
+
+@media (max-width: 1200px){
+	.nav-collapse li{
+		padding:0 10px;
+		}
+	}	
+
+
+@media (max-width: 980px){
+	.logo{
+		width:25%;
+		margin-left:20px;
+		}
+	.logo img{
+		width:100%
+		}	
+	.header h1{
+		font-size:26px;
+		color:#BF2C2C;
+		line-height:40px;
+		padding-top:13px;
+		}	
+	.header h1 span{
+		font-size:33px;
+		}	
+	
+	.slider p{
+		line-height:40px;
+		}	
+	}
+	
+@media (min-width: 760px) {
+	.js .nav-collapse {
+		position: relative;
+		}
+	.js .nav-collapse.closed {
+		max-height: none;
+		}
+	.nav-toggle {
+		display: none;
+		}
+}
+		
+@media (max-width: 760px){
+	.header{
+		text-align:center;
+		}
+	.logo{
+		width:auto;
+		margin:0 auto;
+		float:none;
+		}
+	.header h1{
+		width:100%;
+		float:left;
+		font-size:24px;
+		color:#BF2C2C;
+		line-height:40px;
+		padding-top:13px;
+		display:none;
+		}	
+	.header h1 span{
+		font-size:30px;
+		}	
+	
+	.nav-collapse, .nav-collapse ul {
+		width:100%;
+		float:left;
+		padding-top:0;
+		}	
+	.nav-collapse li{
+		width:100% !important;
+		float:left !important;
+		text-align:center !important;
+		padding:0 !important;
+		background:none !important;
+		}	
+	.nav-collapse li a {
+		margin: 0;
+		float: none !important;
+		display:block;
+		text-align: center;
+		font-size:14px;
+		background:#CCC !important;
+		border-bottom:#FFF solid 1px;
+		padding:4px 0 !important
+	    }
+	.nav-collapse li a:hover,
+	.nav-collapse li a.active {
+		background:#BF2C2C !important;
+		color:#FFF !important;
+		}	
+	.nav-collapse li a.active:hover{
+		color:#FFF !important
+		}	
+	 .nav-collapse ul ul a {
+		display: none;
+	    }	
+	
+	.slider p{
+		width:100%;
+		padding:0;
+		text-align:center;
+		}
+	.slider a{
+		width:60%;
+		margin-bottom:20px;
+		margin-top:10px;
+		}	
+	
+	.cont_left,		
+	.cont_right{
+		width:100%;
+		max-width:100%;
+		}	
+	.cont_right{
+		width:95%;
+		float:left;
+		}	
+	.footer{
+		text-align:center;
+		}
+	
+	.cont1, .cont2{
+		width:100%;
+		}	
+	.cont4, .cont5{
+		width:90%;
+		padding:20px 5%;
+		margin-bottom:10px !important;
+		float:left;
+		}		
+			
+	}	

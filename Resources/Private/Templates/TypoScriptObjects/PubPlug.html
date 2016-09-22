@@ -1,0 +1,39 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+
+
+<h1>ITC Publications</h1>
+
+<div name="Content">
+    <link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'css/bibsonomy.css', package: 'Itc.ITeleTraffic')}"/>
+
+    <script type="text/javascript" src="{f:uri.resource(path: 'js/bibsonomy.js', package: 'Itc.ITeleTraffic')}"></script>
+    <script type="text/javascript" src="{f:uri.resource(path: 'js/jquery.js', package: 'Itc.ITeleTraffic')}"></script>
+    <script type="text/javascript" src="{f:uri.resource(path: 'js/jquery.activity-indicator-1.0.0.min.js', package: 'Itc.ITeleTraffic')}"></script>
+
+    
+
+<script type="text/javascript">
+	<![CDATA[
+		$(document).ready(function() {
+                initBibsonomy();
+                document.getElementById("Publications").id="current";
+        });
+	]]>
+</script>
+
+
+
+    <h2>ITC <f:format.raw>{text}</f:format.raw></h2>
+    <div id="contentContainer">
+        <div id="content">
+                <p>Browse the ITC publications of previous conferences below or visit our <a href="http://www.bibsonomy.org/cv/user/itc">grouppage</a> at <code>bibsonomy.org</code></p>
+                <p>Search: <input type="text" bibType="filter" bibsonomyUrl="user/itc/itc<f:format.raw>{text}</f:format.raw>"></input>
+                <span class="bibInfo" bibType="info" bibsonomyUrl="user/itc/itc<f:format.raw>{text}</f:format.raw>"></span></p>
+
+                <div class="content" bibType="ref-list" bibsonomyUrl="user/itc/itc<f:format.raw>{text}</f:format.raw>" filter="" filterTag=""></div>
+        </div id="content">
+   </div id="contentContainer">
+
+
+</div>
