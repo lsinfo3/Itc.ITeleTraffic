@@ -9,14 +9,16 @@
 <title>Home | ITC - International Teletraffic Congress </title>
 	<f:section name="stylesheets">
 		<link rel="stylesheet" href="{f:uri.resource(path: 'css/style.css', package: 'Itc.ITeleTraffic')}" />
-	  <link rel="stylesheet" href="{f:uri.resource(path: 'css/responsive.css', package: 'Itc.ITeleTraffic')}" />
-    <link rel="stylesheet" href="{f:uri.resource(path: 'css/custom.css', package: 'Itc.ITeleTraffic')}" />
+		<link rel="stylesheet" href="{f:uri.resource(path: 'css/responsive.css', package: 'Itc.ITeleTraffic')}" />
+    		<link rel="stylesheet" href="{f:uri.resource(path: 'css/custom.css', package: 'Itc.ITeleTraffic')}" />
+		<link rel="stylesheet" href="{f:uri.resource(path: 'css/carousel.css', package: 'Itc.ITeleTraffic')}" />
 	</f:section>
 
 	<f:section name="headScripts">
 		<script type="text/javascript" src="{f:uri.resource(path: 'js/responsive-nav.js', package: 'Itc.ITeleTraffic')}"></script>
 		<script type="text/javascript" src="{f:uri.resource(path: 'js/jquery.js', package: 'Itc.ITeleTraffic')}"></script>
 		<script type="text/javascript" src="{f:uri.resource(path: 'js/parallax.js', package: 'Itc.ITeleTraffic')}"></script>
+		<script src="{f:uri.resource(path: '3/js/bootstrap.min.js', package: 'TYPO3.Twitter.Bootstrap')}"></script>
 	</f:section>
 </head>
 
@@ -64,15 +66,15 @@
     </aside>
 
     <nav class="cont_right">
-       {content.sidebar -> f:format.raw()}
 	{content.localsidebar -> f:format.raw()}
+       {content.sidebar -> f:format.raw()}
     </nav>
 </div>
 
 
 <footer class="footer">
   <div class="in">
-	© 2015 <a href="http://www.i-teletraffic.org">i-teletraffic.org</a> | <a href="http://itc28.org/en/impressum.html">Impressum</a>  &nbsp; 
+	©2016  <a href="http://www.i-teletraffic.org">i-teletraffic.org</a> | <a href="http://itc28.org/en/impressum.html">Impressum</a>  &nbsp; 
 	<a href="https://twitter.com/ITC_Tweets" alt="Join Us on Twitter!" target="_blank"><img src="{f:uri.resource(path: 'assets/twss_icon.png', package: 'Itc.ITeleTraffic')}" width="25" alt=""></a> &nbsp; 
 	<a href="https://www.linkedin.com/grp/home?gid=8260384" target="_blank" alt="Join Us on Linked.in!"><img src="{f:uri.resource(path: 'assets/li_icon.png', package: 'Itc.ITeleTraffic')}" width="25" alt=""></a>
  </div>

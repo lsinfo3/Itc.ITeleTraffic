@@ -196,3 +196,14 @@
     group: 'general'
     label: 'Local Sidebar Menu'
     inlineEditable: true
+
+'Itc.ITeleTraffic:Carousel':
+  superTypes: ['TYPO3.Neos:Content']
+  childNodes:
+    carouselItems:
+      type: 'TYPO3.Neos:ContentCollection'
+  ui:
+    label: 'Carousel'
+    group: 'plugins'
+    icon: 'icon-picture'
+    inlineEditable: TRUE

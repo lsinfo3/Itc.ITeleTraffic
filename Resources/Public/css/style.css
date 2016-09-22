@@ -560,11 +560,45 @@ ul h2{
 	}
 
 .container.columns-6-6.typo3-neos-nodetypes-twocolumn {
+	clear: both;
 }
 
 .container.columns-6-6.typo3-neos-nodetypes-twocolumn .column {
         width: 50%;
         float: left;
+}
+
+.container.columns-4-8.typo3-neos-nodetypes-twocolumn {
+	clear: both;
+}
+
+.container.columns-4-8.typo3-neos-nodetypes-twocolumn .column:first-child{
+        width: 30%;
+        float: left;
+}
+
+.container.columns-4-8.typo3-neos-nodetypes-twocolumn .column{
+	width: 70%;
+        float: right;
+}
+
+.container.columns-3-3-6.typo3-neos-nodetypes-threecolumn {
+	clear: both;
+}
+
+.container.columns-3-3-6.typo3-neos-nodetypes-threecolumn .column{
+	width: 12%;
+	float: left;
+}
+
+.container.columns-3-3-6.typo3-neos-nodetypes-threecolumn .column:nth-child(2n){
+        width: 15%;
+        float: left;
+}
+
+.container.columns-3-3-6.typo3-neos-nodetypes-threecolumn .column:last-child{
+        width: 70%;
+        float: right;
 }
 
 .container.columns-4-4-4.typo3-neos-nodetypes-threecolumn {
@@ -586,3 +620,10 @@ ul h2{
         margin-left: 10px;
         margin-bottom: 10px;
 }
+
+.typo3-neos-alignment-center {
+        display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
