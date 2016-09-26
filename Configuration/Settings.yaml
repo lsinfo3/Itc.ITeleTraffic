@@ -1,0 +1,4 @@
+TYPO3:
+  Form:
+    yamlPersistenceManager:
+      savePath: 'resource://Itc.ITeletraffic/Private/Form/'
