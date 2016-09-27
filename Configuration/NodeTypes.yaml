@@ -205,7 +205,7 @@
     label: 'Local Sidebar Menu'
     inlineEditable: true
 
-'Itc.ITeletraffic:PubPlug':
+'Itc.ITeleTraffic:PubPlug':
   superTypes:
     'TYPO3.Neos:Content': TRUE  
   ui:
@@ -225,7 +225,7 @@
         inspector:
           group: 'plugin'
 
-'Itc.ITeletraffic:Carousel':
+'Itc.ITeleTraffic:Carousel':
   superTypes: 
         'TYPO3.Neos:Content': TRUE
   childNodes:
