@@ -139,7 +139,7 @@ prototype(Itc.ITeleTraffic:LocalSidebarMenu) < prototype(TYPO3.Neos.NodeTypes:Me
 
 prototype(Lelesys.News:List).newsItem.templatePath = 'resource://Itc.ITeleTraffic/Private/Templates/TypoScriptObjects/ListItem.html'
 
-prototype(Itc.ITeletraffic:PubPlug) < prototype(TYPO3.Neos:Content) {
+prototype(Itc.ITeleTraffic:PubPlug) < prototype(TYPO3.Neos:Content) {
         templatePath = 'resource://Itc.ITeleTraffic/Private/Templates/TypoScriptObjects/PubPlug.html'
 
         text = ${q(node).property('text')}
