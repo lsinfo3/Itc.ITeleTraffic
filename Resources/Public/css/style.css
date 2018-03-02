@@ -306,7 +306,7 @@ h2{
 	border-bottom:#F7E5E5 solid 2px;
 	font-family: 'OpenSansRegular';
 	padding-bottom:10px;
-	margin-top:10px;
+	#margin-top:10px;
 	padding-top:4px;
 	}
 .right_info h2{
@@ -327,7 +327,7 @@ h2{
 	padding-right:15px;
 	}
 .right_info li:last-child{
-	padding-bottom:0;
+	padding-bottom:10px;
 	border-bottom:none;
 	}
 .typo3-neos-nodetypes-menu li{

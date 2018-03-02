@@ -3,22 +3,22 @@
 # to your pages. You can add as many areas as you like, still
 # only those that are rendered in your TypoScript and Template
 # are visible on your page.
----
+
 'TYPO3.Neos.NodeTypes:Page':
   ui:
     inspector:
       groups:
         site:
-          label: 'Site'
+          label: Site
   properties:
     headerImage:
-      type: 'TYPO3\Media\Domain\Model\ImageInterface'
+      type: TYPO3\Media\Domain\Model\ImageInterface
       ui:
         label: 'Header Image'
-        inlineEditable: FALSE
-        reloadIfChanged: TRUE
+        inlineEditable: false
+        reloadIfChanged: true
         inspector:
-          group: 'site'
+          group: site
   childNodes:
     siteTitle:
       type: 'Itc.ITeleTraffic:SiteTitle'
@@ -27,18 +27,17 @@
     main:
       constraints:
         nodeTypes:
-          'Itc.ITeleTraffic:Congress': FALSE
+          'Itc.ITeleTraffic:Congress': false
     sidebar:
       type: 'TYPO3.Neos:ContentCollection'
     localSidebar:
       type: 'TYPO3.Neos:ContentCollection'
-
 'Itc.ITeleTraffic:SiteTitle':
-  superTypes: 
-        'TYPO3.Neos:Content': TRUE
-        'TYPO3.Neos.NodeTypes:TextMixin': TRUE
+  superTypes:
+    'TYPO3.Neos:Content': true
+    'TYPO3.Neos.NodeTypes:TextMixin': true
   ui:
-    group: 'general'
+    group: general
     label: 'Site Title'
     inspector:
       groups:
@@ -47,59 +46,57 @@
   properties:
     text:
       type: string
-      inlineEditable: TRUE
+      inlineEditable: true
       defaultValue: 'Enter Site Title...'
       ui:
         aloha:
-          'format':
-            'p': FALSE
-            'h1': TRUE
-            'h2': FALSE
-            'h3': FALSE
-            'sup': TRUE
-          'table': []
-          'link': []
-          'list': []
-          'alignment': []
-          'formatlesspaste':
-            'button': FALSE
-            'formatlessPasteOption': TRUE
+          format:
+            p: false
+            h1: true
+            h2: false
+            h3: false
+            sup: true
+          table: {  }
+          link: {  }
+          list: {  }
+          alignment: {  }
+          formatlesspaste:
+            button: false
+            formatlessPasteOption: true
         inspector:
-          group: 'siteTitle'
-
+          group: siteTitle
 'Itc.ITeleTraffic:Teaser':
-  superTypes: 
-        'TYPO3.Neos:Content': TRUE
-        'TYPO3.Neos.NodeTypes:TextMixin': TRUE
+  superTypes:
+    'TYPO3.Neos:Content': true
+    'TYPO3.Neos.NodeTypes:TextMixin': true
   ui:
-    group: 'general'
-    label: 'Teaser'
+    group: general
+    label: Teaser
     inspector:
       groups:
         teaser:
-          label: 'teaser'
+          label: teaser
   properties:
     text:
       type: string
-      inlineEditable: TRUE
+      inlineEditable: true
       defaultValue: 'Enter Teaser Text...'
       ui:
-        label: 'Text'
+        label: Text
         inspector:
-          group: 'teaser'
+          group: teaser
     reference:
       type: reference
       ui:
         label: 'Link Target'
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'teaser'
-
+          group: teaser
 'Itc.ITeleTraffic:ShortLink':
-  superTypes: 
-        'TYPO3.Neos:Content': TRUE
+  superTypes:
+    'TYPO3.Neos:Content': true
   ui:
-    group: 'general'
+    group: general
     label: 'Short Link'
     inspector:
       groups:
@@ -108,24 +105,23 @@
   properties:
     text:
       type: string
-      inlineEditable: TRUE
+      inlineEditable: true
       defaultValue: 'Enter Short Link Text...'
       ui:
         inspector:
-          group: 'shortLink'
+          group: shortLink
     reference:
       type: reference
       ui:
         label: 'Link Target'
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'shortLink'
-
+          group: shortLink
 'Itc.ITeleTraffic:SidebarHeadline':
-  superTypes: 
-        'TYPO3.Neos:Content': TRUE
+  superTypes:
+    'TYPO3.Neos:Content': true
   ui:
-    group: 'general'
+    group: general
     label: 'Sidebar Headline'
     inspector:
       groups:
@@ -134,84 +130,79 @@
   properties:
     text:
       type: string
-      inlineEditable: TRUE
+      inlineEditable: true
       defaultValue: 'Enter Headline...'
       ui:
-        label: 'Headline'
+        label: Headline
         inspector:
-          group: 'sidebarHeadline'
-
+          group: sidebarHeadline
 'Itc.ITeleTraffic:Congress':
-  superTypes: 
-        'TYPO3.Neos:Content': TRUE
+  superTypes:
+    'TYPO3.Neos:Content': true
   ui:
-    group: 'general'
-    label: 'Congress'
+    group: general
+    label: Congress
     inspector:
       groups:
         congress:
-          label: 'Congress'
+          label: Congress
   properties:
     name:
       type: string
       ui:
-        label: 'Name'
-        reloadIfChanged: TRUE
-        inlineEditable: TRUE
+        label: Name
+        reloadIfChanged: true
+        inlineEditable: true
         inspector:
-          group: 'congress'
+          group: congress
     year:
       type: integer
       defaultValue: 2015
       ui:
-        label: 'Year'
-        reloadIfChanged: TRUE
-        inlineEditable: TRUE
+        label: Year
+        reloadIfChanged: true
+        inlineEditable: true
         inspector:
-          group: 'congress'
+          group: congress
     homepageUrl:
       type: string
       ui:
         label: 'Homepage URL'
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'congress'
+          group: congress
     program:
       type: reference
       ui:
-        label: 'Program'
-        reloadIfChanged: TRUE
+        label: Program
+        reloadIfChanged: true
         inspector:
-          group: 'congress'
-
-
+          group: congress
 'Itc.ITeleTraffic:Congresses':
-  superTypes: 
-        'TYPO3.Neos:Content': TRUE
+  superTypes:
+    'TYPO3.Neos:Content': true
   constraints:
     nodeTypes:
-      'Itc.ITeleTraffic:Congress': TRUE
-      '*': FALSE
+      'Itc.ITeleTraffic:Congress': true
+      '*': false
   ui:
-    group: 'general'
-    label: 'Congresses'
+    group: general
+    label: Congresses
     inlineEditable: true
-
 'Itc.ITeleTraffic:LocalSidebarMenu':
-  superTypes: 
-        'TYPO3.Neos.NodeTypes:Menu': TRUE
+  superTypes:
+    'TYPO3.Neos.NodeTypes:Menu': true
   ui:
-    group: 'general'
+    group: general
     label: 'Local Sidebar Menu'
     inlineEditable: true
-
 'Itc.ITeleTraffic:PubPlug':
   superTypes:
-    'TYPO3.Neos:Content': TRUE  
+    'TYPO3.Neos:Content': true
   ui:
     label: 'ITC Pubs'
-    icon: 'icon-book'
-    group: 'plugins'
+    icon: icon-book
+    group: plugins
     inspector:
       groups:
         plugin:
@@ -219,24 +210,22 @@
   properties:
     text:
       type: string
-      inlineEditable: TRUE
+      inlineEditable: true
       ui:
         label: 'ITC Conference Number (Double Digits)'
         inspector:
-          group: 'plugin'
-
+          group: plugin
 'Itc.ITeleTraffic:Carousel':
-  superTypes: 
-        'TYPO3.Neos:Content': TRUE
+  superTypes:
+    'TYPO3.Neos:Content': true
   childNodes:
     carouselItems:
       type: 'TYPO3.Neos:ContentCollection'
   ui:
     label: 'ITC Carousel'
-    group: 'plugins'
-    icon: 'icon-picture'
-    inlineEditable: TRUE
-
+    group: plugins
+    icon: icon-picture
+    inlineEditable: true
 'TYPO3.Neos.NodeTypes:Form':
   properties:
     formIdentifier:
@@ -244,7 +233,6 @@
         inspector:
           editorOptions:
             values:
-              '': ~
-              # Maps to the file Sites/Vendor.Site/Resources/Private/Form/contact-form.yaml
-              'contact-form':
-                label: 'contact-form'
+              '': null
+              contact-form:
+                label: contact-form

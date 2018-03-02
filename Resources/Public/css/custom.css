@@ -35,3 +35,11 @@ html.js body div.in nav.cont_right div.neos-contentcollection a.right_links {
 .tags {
         Display: none;
 }
+
+.cont_left h2 a, h2 a:link{
+	color: white !important;
+}
+
+.cont_right .typo3-neos-nodetypes-text{
+	margin-bottom: 10px;
+}
