@@ -5,7 +5,7 @@
 <div class="news-overview">
 	<f:if condition="{newsCollection}">
 		<f:then>
-      <a href='/en/posts.html' class='right_links'>What's New?</a>
+      <a href='/posts.html' class='right_links'>What's New?</a>
 			<typo3cr:widget.paginate nodes="{newsCollection}" as="paginatedNewsItems" widgetId="{node.name}" configuration="{configuration.pagination}">
 				<ul class="right_info">
 					<f:for each="{paginatedNewsItems}" as="news">
