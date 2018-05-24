@@ -43,3 +43,108 @@ html.js body div.in nav.cont_right div.neos-contentcollection a.right_links {
 .cont_right .typo3-neos-nodetypes-text{
 	margin-bottom: 10px;
 }
+
+/* ------------------------------------ */
+h1,h2,h3,h4,h5,h6 {margin: 0px;}
+
+p {margin: 0px;}
+
+
+/* ------------------------------------ */
+input {
+  	display: block;
+	outline: none;
+	border: none !important;
+}
+
+textarea {
+  display: block;
+  outline: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+/*//////////////////////////////////////////////////////////////////
+ *  * [ Fancy Table ]*/
+table {
+  width: 100%;
+  background-color: #fff;
+}
+
+table a:hover {
+  color: white !important;
+}
+
+th, td {
+  font-weight: unset;
+  padding-right: 10px;
+}
+
+.fancycolumn {
+  width: 130px;
+  padding-left: 25px;
+}
+
+.fancycolumn.column1 {
+  width: 265px;
+  padding-left: 42px;
+}
+
+.fancyrow.head th {
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+
+.fancyrow td {
+  padding-top: 18px;
+  padding-bottom: 14px;
+}
+
+.fancytable tbody tr:nth-child(even) {
+  background-color: #F5F5F5;
+}
+
+.fancytable td {
+  font-size: 14px;
+  color: #808080;
+  line-height: 1.4;
+}
+
+.fancytable th {
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.4;
+text-transform: uppercase;
+
+  background-color: #BF2C2C;
+}
+
+.fancytable .fancyrow:hover td {
+  opacity: 0.2;
+  background-color: #BF2C2C;
+  color: #fff;
+}
+
+.fancytable .fancyrow:hover td a{
+  color: white !important;
+  text-decoration: underline;
+}
+
+.fancytable .fancyrow:hover td:first-child {
+  opacity: 1;
+  background-color: #BF2C2C;
+  color: #fff;
+}
+
+.fancytable .fancyrow td:hover {
+  opacity: 1;
+  background-color: #BF2C2C;
+  color: #fff;
+}
+
+.fancytable .fancyrow td:hover a{
+  color: white !important;
+  text-decoration: underline;
+}
